@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy Policy for Tunes Aura Music Player for Android.">
+<title>Privacy Policy — Tunes Aura Music Player</title>
+<style>
+:root{color-scheme:light;--ink:#191919;--muted:#5e6268;--line:#e5e7eb;--accent:#d92828;--paper:#fff;--soft:#f7f7f8}
+*{box-sizing:border-box}body{margin:0;background:var(--soft);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:880px;margin:32px auto;padding:clamp(20px,4vw,44px);background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,.04)}
+h1{font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;margin:.2em 0 .5em;letter-spacing:-.035em}h2{font-size:1.35rem;margin:2em 0 .5em;line-height:1.3}p{margin:.65em 0}ul{padding-left:1.3rem}li{margin:.45em 0}.meta{color:var(--muted);font-size:.95rem}.accent{height:5px;width:74px;background:var(--accent);border-radius:20px;margin-bottom:22px}.note{background:#fff6f5;border-left:4px solid var(--accent);padding:12px 16px;border-radius:8px;margin:20px 0}a{color:#a91b1b;text-underline-offset:3px;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);margin-top:2.5em;padding-top:1em;color:var(--muted);font-size:.9rem}
+@media(max-width:600px){main{margin:0;border-radius:0;border-left:0;border-right:0;min-height:100vh}}
+</style>
+</head>
+<body>
+<main>
+<div class="accent"></div>
+<p class="meta">Last updated: 12 October 2026</p>
+<h1>Privacy Policy</h1>
+<p><strong>Tunes Aura Music Player</strong> is an Android application for browsing and playing music stored on your device. This policy explains what information the app accesses, when information is sent to other services, and the choices available to you.</p>
+<p><strong>Privacy contact:</strong> <a href="mailto:pinankhpatel@gmail.com">patelpinankh@gmail.com</a></p>
+
+<h2>1. Information processed on your device</h2>
+<p>To provide the music-player features, Tunes Aura accesses audio files and related Android MediaStore information when you grant the requested permissions. This can include track titles, artist and album names, duration, file/content references, and album artwork. The app uses this information to display your library, play selected music, and provide library and playback features.</p>
+<p>The app stores app data locally, including supported playlists, playback history and play counts, settings, appearance preferences, and other information needed for its features. You can use the app's backup and restore features to create or restore a local backup containing the items you select, such as playlists, settings, and custom images.</p>
+<p>Android backup is enabled in the reviewed app configuration. Depending on your device and Android backup settings, eligible app data may also be included in Android's system backup. This system backup is controlled by Android and your device/account settings, not by a Tunes Aura-operated cloud account.</p>
+
+<h2>2. Microphone permission</h2>
+<p>The reviewed source declares Android's <code>RECORD_AUDIO</code> permission and requests it from the Equalizer screen for intended visualizer-related functionality. In the source version reviewed, visualizer capture initialization is disabled and no active microphone recording or upload path was found. Tunes Aura does not send microphone recordings to a Tunes Aura server in that reviewed implementation. The permission and intended feature should be checked against the exact release build before publication.</p>
+
+<h2>3. Online artist and album information</h2>
+<p>Some screens can request information from external music metadata providers. These requests may contain music metadata from your library; the providers also receive ordinary connection information needed to answer a request, such as your IP address and request time.</p>
+<ul>
+<li><strong>Last.fm:</strong> When you open an album-details screen, the app requests album information using the album's artist name and album title. When the artist-detail screen's metadata download setting permits metadata requests, the app may request an artist biography using the artist name and your device's language setting. These requests use Last.fm's API. Read <a href="https://www.last.fm/legal/privacy" rel="noopener noreferrer">Last.fm's Privacy Policy</a>.</li>
+<li><strong>Deezer:</strong> When the automatic artist-image setting permits downloads, the app sends an artist name to Deezer's artist-search API to find artist artwork and then loads the returned image. The setting provides options for always downloading, downloading on Wi-Fi, or never downloading artist images. Read <a href="https://www.deezer.com/legal/personal-datas" rel="noopener noreferrer">Deezer's personal-data information</a>.</li>
+<li><strong>Lyrics web search:</strong> If you choose Search from the Lyrics screen, the app opens Google Search in your external browser with the current track title and artist name in the search query. Google and your browser handle that request under their own policies. Read <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
+</ul>
+<p>Tunes Aura does not upload the full audio file to Last.fm or Deezer in these metadata requests. Normal local playback uses the music files available on your device.</p>
+
+<h2>4. Casting to a compatible device</h2>
+<p>If you choose to cast music, Tunes Aura starts a local network server during the Cast session and serves the selected song's audio and album artwork to the chosen Cast receiver. The app also sends media details such as the track title, artist, and album to the receiver so it can present the currently playing item. The local server is stopped when the Cast session ends or is suspended.</p>
+<p>In the reviewed source, local media is served over HTTP on your local network, rather than a TLS-encrypted connection, and the server does not authenticate each request. Only use casting on a trusted network. This implementation detail is also being reviewed for security improvement.</p>
+<p>The Google Cast SDK has separate technical data handling. Google's published Cast SDK disclosure says it may send anonymized SDK interaction information to Google, including discovery and session-management events, mobile-device information, and client Cast-app information, for Cast SDK operation and improvement. Google states that these SDK analytics transmissions are encrypted in transit. See the <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure" rel="noopener noreferrer">Google Cast SDK data-safety disclosure</a> and <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a>. The exact disclosures should be checked against the Cast SDK version in the release.
+</p>
+
+<h2>5. Google Play purchases</h2>
+<p>The app includes Google Play Billing for its Pro entitlement. When purchase or restore functionality is used, the app queries Google Play for the status of the in-app product and acknowledges qualifying purchases. Google Play handles the billing transaction and associated account/payment processing under Google's terms and privacy practices. The reviewed source does not send purchase details to a Tunes Aura-operated payment server. See <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a>.</p>
+
+<h2>6. Bug reports and crash details</h2>
+<p>If you choose <em>Report an issue</em>, the app copies app and device diagnostic information to your clipboard and opens the Tunes Aura public issue tracker on GitHub. The information prepared by the app can include the app version and version code, Android version and build, device brand/manufacturer/model and hardware details, supported processor ABIs, language settings, and app theme preferences. You control whether to paste and submit this information. GitHub issues may be publicly visible, so review the content before submitting. Read <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub's Privacy Statement</a>.</p>
+<p>If the app encounters a crash, the reviewed implementation displays crash details on the device. If you choose <em>Share Crash Report</em>, the app creates a text report containing diagnostic/error details and opens Android's share interface. The report is sent only if you select a destination and share it. No automatic remote crash-report upload implementation was found in the reviewed source archive.</p>
+
+<h2>7. Advertising and analytics</h2>
+<p>No dedicated advertising SDK or independent app-analytics SDK was found in the source archive reviewed. The Google Cast SDK does have the technical data handling described in Section 4. This statement applies to the source archive reviewed; the dependency list and SDK behaviour must be rechecked if the release build differs or additional SDKs are added.</p>
+
+<h2>8. How information is shared</h2>
+<p>Tunes Aura does not operate a user-account or music-library cloud-sync service in the reviewed source. Information leaves your device through the specific features described in this policy: requests to Last.fm and Deezer for metadata/artwork, use of the Google Cast SDK and receiver when casting, Google Play Billing when purchase features are used, searches opened in your external browser, and reports or backup files that you choose to share through another app or service.</p>
+<p>External services process information under their own policies. Tunes Aura does not control how those services retain or use information after they receive it.</p>
+
+<h2>9. Data retention and deletion</h2>
+<p>Local playlists, history, play counts, preferences, and other app data remain on your device while stored by the app, unless you remove them through app features, clear the app's storage, or uninstall it. Eligible app data may also be included in Android backup as described in Section 1. Manually created backup files and files shared with other apps or services remain under your control and may persist at the destination until deleted there.</p>
+<p>For information sent to Last.fm, Deezer, Google, GitHub, or another chosen share destination, retention and deletion are governed by that provider's policies and features. Tunes Aura cannot delete copies stored by those independent services on your behalf.</p>
+
+<h2>10. Security</h2>
+<p>Requests to the Last.fm and Deezer API endpoints used in the reviewed source use HTTPS. Casting's local audio and artwork stream is an exception: it uses HTTP on the local network as described in Section 4. No method of transmission or storage can be guaranteed completely secure. Use the Cast feature only on a network you trust.</p>
+
+<h2>11. Changes to this policy</h2>
+<p>This policy should be updated whenever the app's data practices, features, or included SDKs change. The latest version should be published at a stable public HTTPS webpage and linked from both the Google Play listing and within Tunes Aura.</p>
+
+<h2>12. Contact</h2>
+<p>For questions about this policy or Tunes Aura's privacy practices, contact <a href="mailto:patelpinankh@gmail.com">pinankhpatel@gmail.com</a>.</p>
+<footer>Privacy Policy for Tunes Aura Music Player · Last updated 12 October 2026</footer>
+</main>
+</body>
+</html>
